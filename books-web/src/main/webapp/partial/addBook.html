@@ -1,0 +1,15 @@
+<div class="row">
+    <h2>Add New Book</h2>
+    <form ng-submit="addBook()">
+        <label for="authorInput">Author:</label>
+        <input type="text" id="authorInput" ng-model="newBook.author" required>
+
+        <label for="genreInput">Genre:</label>
+        <input type="text" id="genreInput" ng-model="newBook.genre" required>
+
+        <label for="titleInput">Title:</label>
+        <input type="text" id="titleInput" ng-model="newBook.title" required>
+
+        <button type="submit">Add Book</button>
+    </form>
+</div>

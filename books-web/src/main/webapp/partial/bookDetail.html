@@ -1,0 +1,15 @@
+<div class="row">
+    <h1>This is book detail page.</h1>
+    <div class="book-details">
+        <h1>{{ book.title }}</h1>
+        <p>Author: {{ book.author }}</p>
+        <p>Genre: {{ book.genre }}</p>
+        <p>Rating: {{ book.ratting }}</p>
+    </div>
+    <!-- min="1" max="5" -->
+    <div>
+        <label for="ratingInput">Rate this book:</label>
+        <input type="number" id="ratingInput" class="rating-input" ng-model="rating">
+        <button ng-click="submitRating()">Submit Rating</button>
+    </div>    
+</div>

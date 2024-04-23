@@ -1,0 +1,27 @@
+.incenter {
+    margin-left: 25rem;
+}
+button {
+    color: #ffffff;
+    background-color: #428bca;
+    width: 11rem;
+    height: 5rem;
+    border: 3px solid;
+}
+button:hover {
+    color: azure;
+}
+select {
+    width: 16rem;
+    height: 4rem;
+    background-color: darkgray;
+    font-family: cursive;
+    font-size: large;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h4{
+    font-size:x-large;
+}

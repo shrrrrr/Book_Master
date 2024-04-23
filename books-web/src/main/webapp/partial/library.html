@@ -1,0 +1,51 @@
+<!-- <div class="row">
+    <h1>Library</h1>
+    <a ng-click="gotoAddBook()">Add New Book</a>
+    <div class="container">
+        <div class="book-card" ng-repeat="book in books" ng-click="showBookDetail(book.id)">
+            <div class="book-title">{{ book.title }}</div>
+            <div class="book-author">By: {{ book.author }}</div>
+            <div class="book-rating">Rating: {{ book.rating }}</div>
+            <div class="book-genre">Rating: {{ book.genre }}</div>
+        </div>
+    </div>/
+
+</div> -->
+<div class="row">
+    <h1>Library</h1>
+    <a ng-click="gotoAddBook()">Add New Book</a>
+   
+
+    <div class="filters">
+        <h3>Genre</h3>
+        <label ng-repeat="genre in genres">
+            <input type="checkbox" ng-model="selectedGenres[genre]" ng-change="applyFilters()">{{ genre }}
+        </label>
+    </div>
+    <div class="filters">
+        <h3>Author</h3>
+        <label ng-repeat="author in authors">
+            <input type="checkbox" ng-model="selectedAuthors[author]" ng-change="applyFilters()">{{ author }}
+        </label>
+    </div>
+    <div class="filter">
+        <label>Rating:</label>
+        <select ng-model="selectedRating" ng-change="applyFilters()">
+            <option value="">All</option>
+            <option ng-repeat="rating in [1, 2, 3, 4, 5]">{{ rating }}</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label>Sort By:</label>
+        <label><input type="radio" ng-model="sortBy" value="rating" ng-change="sortBooks()"> Rating</label>
+        <label><input type="radio" ng-model="sortBy" value="totalRatings" ng-change="sortBooks()"> Number of Ratings</label>
+    </div>
+    <div class="container">
+        <div class="book-card" ng-repeat="book in filteredBooks" ng-click="showBookDetail(book.id)">
+            <div class="book-title">{{ book.title }}</div>
+            <div class="book-author">By: {{ book.author }}</div>
+            <div class="book-rating">Rating: {{ book.rating }}</div>
+            <div class="book-genre">Genre: {{ book.genre }}</div>
+        </div>
+    </div>
+</div>
